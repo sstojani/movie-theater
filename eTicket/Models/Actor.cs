@@ -6,6 +6,7 @@ namespace eTicket.Models
     public class Actor : IEntityBase
     {
         //this is new branc
+        //this is vestzxz\xadsklasdusdjbasd
         [Key]
         public int Id { get; set; }
         
