@@ -1,0 +1,9 @@
+C:\Users\Semi\source\repos\eTicket\eTicket\obj\Release\net7.0\eTicket.csproj.AssemblyReference.cache
+C:\Users\Semi\source\repos\eTicket\eTicket\obj\Release\net7.0\eTicket.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Semi\source\repos\eTicket\eTicket\obj\Release\net7.0\eTicket.AssemblyInfoInputs.cache
+C:\Users\Semi\source\repos\eTicket\eTicket\obj\Release\net7.0\eTicket.AssemblyInfo.cs
+C:\Users\Semi\source\repos\eTicket\eTicket\obj\Release\net7.0\eTicket.csproj.CoreCompileInputs.cache
+C:\Users\Semi\source\repos\eTicket\eTicket\obj\Release\net7.0\eTicket.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Semi\source\repos\eTicket\eTicket\obj\Release\net7.0\eTicket.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Semi\source\repos\eTicket\eTicket\obj\Release\net7.0\eTicket.RazorAssemblyInfo.cache
+C:\Users\Semi\source\repos\eTicket\eTicket\obj\Release\net7.0\eTicket.RazorAssemblyInfo.cs

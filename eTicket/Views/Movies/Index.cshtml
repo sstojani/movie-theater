@@ -1,6 +1,5 @@
 ﻿@model IEnumerable<Movie>
 
-
 @{
     ViewData["Title"] = "List of Movies";
 }
@@ -15,7 +14,7 @@
                             <p class="card-text">
                                 <h5 class="card-title">
                                     @item.Name
-                                    <a class="text-white" style="float:right"><i class="bi bi-pencil-square"></i></a>
+                                    <a class="text-white" style="float:right" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
                                 </h5>
                             </p>
                         </div>
@@ -52,7 +51,9 @@
                     <div class="col-md-12">
                         <div class="card-footer">
                             <p class="card-text">
-                                <a class="btn btn-outline-primary" style="float:right"><i class="bi bi-eye-fill"></i> Show Details</a>
+                                <a class="btn btn-outline-primary" style="float:right" asp-action="Details" asp-route-id="@item.Id">
+                                    <i class="bi bi-eye-fill"></i> Show Details
+                                    </a>
                                 <a class="btn btn-success text-white"><i class="bi bi-cart-plus"></i> Add to Card (Price @item.Price.ToString("c"))</a>
                             </p>
                         </div>
@@ -63,3 +64,5 @@
         </div>
     }
 </div>
+
+@await Html.PartialAsync("_CreateItem", "Movies")
