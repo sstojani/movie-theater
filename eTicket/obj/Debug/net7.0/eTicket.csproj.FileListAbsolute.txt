@@ -87,3 +87,9 @@ C:\Users\Semi\source\repos\eTicket\eTicket\obj\Debug\net7.0\refint\eTicket.dll
 C:\Users\Semi\source\repos\eTicket\eTicket\obj\Debug\net7.0\eTicket.pdb
 C:\Users\Semi\source\repos\eTicket\eTicket\obj\Debug\net7.0\eTicket.genruntimeconfig.cache
 C:\Users\Semi\source\repos\eTicket\eTicket\obj\Debug\net7.0\ref\eTicket.dll
+C:\Users\Semi\source\repos\eTicket\eTicket\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Semi\source\repos\eTicket\eTicket\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Semi\source\repos\eTicket\eTicket\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Semi\source\repos\eTicket\eTicket\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Semi\source\repos\eTicket\eTicket\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Semi\source\repos\eTicket\eTicket\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
