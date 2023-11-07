@@ -2,6 +2,7 @@
 using eTicket.Data.ViewModels;
 using eTicket.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System.Text.RegularExpressions;
 
 namespace eTicket.Data.Services
@@ -106,6 +107,14 @@ namespace eTicket.Data.Services
             await _context.SaveChangesAsync();
         }
 
-
+        public async Task DeleteMovieAsync(int id)
+        {
+            var movie = await _context.Movies.FirstOrDefaultAsync(n => n.Id == id);
+            if (movie != null)
+            {
+                _context.Movies.Remove(movie);
+                await _context.SaveChangesAsync();
+            }
+        }
     }
 }

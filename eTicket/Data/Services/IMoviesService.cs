@@ -1,4 +1,4 @@
-﻿    using eTicket.Data.Base;
+﻿using eTicket.Data.Base;
 using eTicket.Data.ViewModels;
 using eTicket.Models;
 
@@ -13,6 +13,8 @@ namespace eTicket.Data.Services
         Task AddNewMovieAsync(NewMovieVM data);
 
         Task UpdateMovieAsync(NewMovieVM data);
+
+        Task DeleteMovieAsync(int id);
 
     }
 }

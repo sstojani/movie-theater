@@ -35,7 +35,11 @@
                         }</style>
 
                     <div class="form-group" style="margin-top:20px;">
+                    @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                    {
                         <a class="btn btn-outline-success" style="float:right;" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+                    }
+                        
                         <a class="btn btn-outline-secondary" asp-action="Index">Show All</a>
                     </div>
             </div>

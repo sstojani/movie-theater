@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Semi\\source\\repos\\eTicket\\eTicket\\eTicket.csproj": {}
+    "C:\\Users\\Semi\\source\\repos\\eTicket - TestSubject_1\\eTicket\\eTicket.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Semi\\source\\repos\\eTicket\\eTicket\\eTicket.csproj": {
+    "C:\\Users\\Semi\\source\\repos\\eTicket - TestSubject_1\\eTicket\\eTicket.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Semi\\source\\repos\\eTicket\\eTicket\\eTicket.csproj",
+        "projectUniqueName": "C:\\Users\\Semi\\source\\repos\\eTicket - TestSubject_1\\eTicket\\eTicket.csproj",
         "projectName": "eTicket",
-        "projectPath": "C:\\Users\\Semi\\source\\repos\\eTicket\\eTicket\\eTicket.csproj",
+        "projectPath": "C:\\Users\\Semi\\source\\repos\\eTicket - TestSubject_1\\eTicket\\eTicket.csproj",
         "packagesPath": "C:\\Users\\Semi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Semi\\source\\repos\\eTicket\\eTicket\\obj\\",
+        "outputPath": "C:\\Users\\Semi\\source\\repos\\eTicket - TestSubject_1\\eTicket\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Semi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -47,6 +47,10 @@
             "FluentValidation.AspNetCore": {
               "target": "Package",
               "version": "[11.3.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.13, )"
             },
             "Microsoft.AspNetCore.Mvc.Core": {
               "target": "Package",

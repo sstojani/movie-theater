@@ -20,3 +20,27 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.pagination {
+    text-align: center;
+    margin-left:42%;
+}
+
+    .pagination a {
+        color: black;
+        text-decoration: none;
+        padding: 8px 15px;
+        display: inline-block;
+    }
+
+        .pagination a.active {
+            background-color: blue;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: lightblue;
+            border-radius: 5px;
+        }
+

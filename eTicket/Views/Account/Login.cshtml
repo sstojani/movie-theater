@@ -1,0 +1,130 @@
+﻿@using eTicket.Data.ViewModels;
+@model LoginRegisterVM;
+
+
+@{
+    ViewData["Title"] = "Login to your account";
+}
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+
+<!------------------------------------------ Login Form ------------------------------------------->
+<div class="container">
+    @if (TempData["Error"] != null)
+    {
+        <div class="col-md-12 alert alert-primary">
+            <span><b>Sorry!</b> - @TempData["Error"] </span>
+        </div>
+    }
+    <div class="curved-shape"></div>
+    <div class="curved-shape2"></div>
+    <div class="form-box Login">
+        <h2 class="animation" style="--D:0; --S:21;">Login</h2>
+        <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="input-box animation" style="--D:1; --S:22;">
+                <input asp-for="LoginModel.EmailAddress" type="text" required />
+                <label asp-for="LoginModel.EmailAddress">Email</label>
+                <span asp-validation-for="LoginModel.EmailAddress" class="text-danger"></span>
+                <i class='bx bxs-user'></i>
+
+            </div>
+            
+            <div class="input-box animation" style="--D:2; --S:23;">
+                <input asp-for="LoginModel.Password" type="password" required />
+                <label asp-for="LoginModel.Password">Password</label>
+                <span asp-validation-for="LoginModel.Password" class="text-danger"></span>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+
+            <div class="input-box animation" style="--D:3; --S:24;">
+                <button class="btn" type="submit" style="color:white">Login</button>
+            </div>
+
+            <div class="regi-link animation" style="--D:4; --S:25;">
+                <p>Don't have an account? <a href="#" class="SignUpLink" >Sign Up</a></p>
+            </div>
+        </form>
+    </div>
+    <div class="info-content Login">
+        <h2 class="animation" style="--D:0; --S:20;">WELCOME</h2>
+        <p class="animation" style="--D:1; --S:21;">Login in to expreience the best quality and variaty of movies ever seen!</p>
+    </div>
+
+    <!------------------------------------- Register Form ------------------------------------------>
+    <div class="form-box Register">
+        <h2 class="animation" style="--li:17; --S:0;"></h2>
+        <form asp-action="Register">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="input-box animation" style="--li:18; --S:1;">
+                <input asp-for="RegisterModel.FullName" id="fullname" type="text" required />
+                <label asp-for="RegisterModel.FullName">Full Name</label>
+                <span asp-validation-for="RegisterModel.FullName" class="text-danger"></span>
+                <i class='bx bxs-user'></i>
+            </div>
+
+            <div class="input-box animation" style="--li:19; --S:2;">
+                <input asp-for="RegisterModel.EmailAddress" id="email" type="email" required />
+                <label asp-for="RegisterModel.EmailAddress">Email</label>
+                <span asp-validation-for="RegisterModel.EmailAddress" class="text-danger"></span>
+                <i class='bx bxs-envelope'></i>
+            </div>
+            
+            <div class="input-box animation" style="--li:20; --S:3;">
+                <input asp-for="RegisterModel.Password" id="password" type="password" required />
+                <label asp-for="RegisterModel.Password">Password</label>
+                <span asp-validation-for="RegisterModel.Password" class="text-danger"></span>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+
+            <div class="input-box animation" style="--li:21; --S:4;">
+                <input asp-for="RegisterModel.ConfirmPassword" id="confirmpassword" type="password" required />
+                <label asp-for="RegisterModel.ConfirmPassword">Confirm Password</label>
+                <span asp-validation-for="RegisterModel.ConfirmPassword" class="text-danger"></span>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+
+            <div class="input-box animation" style="--li:22; --S:5;">
+                <button onclick="callAlert('Register Successfuly')" class="btn" type="submit" style="color:white">Register</button>
+            </div>
+
+            <div class="regi-link animation" style="--li:23; --S:6;">
+                <p>You have an account? <a href="#" class="SignInLink" @* asp-controller="Account" asp-action="Login" *@>Sign In</a></p>
+            </div>
+        </form>
+    </div>
+    <div class="info-content Register">
+        <h2 class="animation" id="register" style="--li:17; --S:0;">Register</h2>
+        <p class="animation" style="--li:18; --S:1;">Dont miss a chance to see the newest movies of 2023 and upcomming movie premiers!</p>
+    </div>
+</div>
+<script src="~/js/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    // $("#login").click(function () {
+    //     var fullname = $("#fullname").val();
+    //     var email = $("#email").val();
+    //     var password = $("#password").val();
+    //     var confirmpassword = $("#confirmpassword").val();
+
+    //     if (fullname == '' || email == '' || password == '' || confirmpassword == '') {
+    //         Swal.fire({
+    //             title: "Missing Field?",
+    //             text: "You are missing a field",
+    //             icon: "question"
+    //         });
+    //     }
+    //     else {
+    //         Swal.fire({
+    //             title: "Good job!",
+    //             text: "You register was successful",
+    //             icon: "success"
+    //         });
+    //     }
+        function callAlert(msg) {
+            alert(msg);
+        }
+    //});
+</script>

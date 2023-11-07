@@ -4866,9 +4866,9 @@ textarea.form-control-lg {
 }
 
 .alert-primary {
-  color: #084298;
-  background-color: #cfe2ff;
-  border-color: #b6d4fe;
+    color: #5287ed;
+    background-color: #2556d0;
+    border-color: #25252b;
 }
 .alert-primary .alert-link {
   color: #06357a;

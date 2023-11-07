@@ -8,11 +8,11 @@
     }
   },
   "profiles": {
-    "http": {
+    "Test": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "launchUrl": "Movies",
+      "launchUrl": "Account/Login",
       "applicationUrl": "http://localhost:58135",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

@@ -1,6 +1,8 @@
 ﻿using eTicket.Data;
 using eTicket.Data.Services;
+using eTicket.Data.Static;
 using eTicket.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -16,6 +18,8 @@ namespace eTicket.Controllers
         {
             _service = service;
         }
+
+        [Authorize]
         public async Task<IActionResult> Index()
         {
             var allMovies = await _service.GetAllAsync(n => n.Cinema);
@@ -23,6 +27,7 @@ namespace eTicket.Controllers
         }
 
         //Search
+        [Authorize]
         public async Task<IActionResult> Filter(string searchString)
         {
             var allMovies = await _service.GetAllAsync(n => n.Cinema);
@@ -36,7 +41,7 @@ namespace eTicket.Controllers
         }
 
         //GET: movies/details/1
-
+        [Authorize]
         public async Task<IActionResult> Details(int id)
         {
             var movieDetails = await _service.GetMoviesByIdAsync(id);
@@ -44,6 +49,7 @@ namespace eTicket.Controllers
         }
 
         //GET: movies/create
+        [Authorize(Roles = UserRoles.Admin)]
         public async Task<IActionResult> Create()
         {
             var moviesDropdownData = await _service.GetNewMovieDropdownsValues();
@@ -55,6 +61,7 @@ namespace eTicket.Controllers
             return View();
         }
 
+        [Authorize(Roles = UserRoles.Admin)]
         [HttpPost]
         public async Task<IActionResult> Create(NewMovieVM movie)
         {
@@ -74,6 +81,7 @@ namespace eTicket.Controllers
 
 
         //GET: movies/edit/1
+        [Authorize(Roles = UserRoles.Admin)]
         public async Task<IActionResult> Edit(int id)
         {
             var movieDetails = await _service.GetMoviesByIdAsync(id);
@@ -103,6 +111,7 @@ namespace eTicket.Controllers
             return View(response);
         }
 
+        [Authorize(Roles = UserRoles.Admin)]
         [HttpPost]
         public async Task<IActionResult> Edit(int id, NewMovieVM movie)
         {
@@ -119,6 +128,17 @@ namespace eTicket.Controllers
                 return View(movie);
             }
             await _service.UpdateMovieAsync(movie);
+            return RedirectToAction(nameof(Index));
+        }
+
+        //Remove Movie
+        [Authorize(Roles = UserRoles.Admin)]
+        public async Task<IActionResult> Remove(int id)
+        {
+            var movieDetails = await _service.GetByIdAsync(id);
+            if (movieDetails == null) return View("NotFound");
+
+            await _service.DeleteMovieAsync(id);
             return RedirectToAction(nameof(Index));
         }
     }

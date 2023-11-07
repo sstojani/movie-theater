@@ -77,7 +77,7 @@
 
             env: 'sandbox',
             client: {
-                sandbox: 'AXYtaOhbsf1mmt2dVxrfy4Giz4KnYkp5lOFkbiJgTNLRfKsYQrstAI_qBbwubM0PVr__aOyxqT6wWloL'
+                sandbox: 'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R'
             },
 
             //Customize button
@@ -105,8 +105,8 @@
             //Execute Payment
             onAuthorize: function (data, actions) {
                 return actions.payment.execute().then(function () {
-                    var url = '@Url.Action("OrderCompleted", "Orders", new { } )';
-                    window.location = url;
+                    var url = '@Url.Action("CompleteOrder", "Orders", new { } )';
+                    window.location.href = url;
                 })
             }
 
